@@ -18,6 +18,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'rails_admin', '~> 1.2'
+#rails admin gem for adminstration of the data
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -31,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'searchkick'
 
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.2'

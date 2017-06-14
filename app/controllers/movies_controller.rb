@@ -5,13 +5,23 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
+     @movies = Movie.all
+        # @movies = Movie.where("name LIKE ?","%#{params[:search]}%")
+
   end
 
   # GET /movies/1
   # GET /movies/1.json
   def show
-  end
+  # @reviews =Review.where(movie_id: @movie_id).order("created_at DESC")  
+      @reviews = @movie.reviews.to_a
+
+@avg_review = if @reviews.blank?
+      0
+    else
+      @movie.reviews.average(:rating).round(2)
+    end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+      end
 
   # GET /movies/new
   def new
